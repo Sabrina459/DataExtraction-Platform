@@ -1,0 +1,5 @@
+steps:
+  - name:'gcr.io/cloud-builders/docker'
+    args: ['build', '-f', 'Dockerfile.prod', '-t', 'northamerica-northeast2-docker.pkg.dev/vigilant-augury-477221-j1/docke-rapi/description-api:latest', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'northamerica-northeast2-docker.pkg.dev/vigilant-augury-477221-j1/docke-rapi/description-api:latest']
