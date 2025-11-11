@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extension Popup</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Завантажити .csv</h1>
+            <p class="subtitle">Не забудь прогрузити всі товари 😘</p>
+        </div>
+        
+        <div class="input-group">
+            <label for="filename">Ім'я файлу</label>
+            <input type="text" id="filename" value="">
+        </div>
+        
+        <button id="nodescBtn">
+            <span class="icon">📁</span>
+            <span>Download without description</span>
+        </button>
+        <button id="htmldescBtn">
+            <span class="icon">📁</span>
+            <span>Download with html</span>
+        </button>
+        <button id="textdescBtn">
+            <span class="icon">📁</span>
+            <span>Download with text</span>
+        </button>
+    </div>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Parsing products...</p>
+    </div>
+    <div class="unsupported-message" id="unsupportedMessage">
+        <div class="icon">⚠️</div>
+        <h2>Website Not Supported</h2>
+        <p>This website is not configured yet.</p>
+        <p>Please contact admin to add support.</p>
+    </div>
+    <script type="module" src="popup.js"></script>
+</body>
+</html>

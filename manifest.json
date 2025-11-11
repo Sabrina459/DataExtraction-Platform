@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "HomePharma Product Exporter",
+    "version": "1.0",
+    "description": "Extract product lists from homepharma.shop into CSV files.",
+    "permissions": ["scripting", "activeTab", "downloads"],
+    "host_permissions": ["https://homepharma.shop/*", "https://supplier-description-api-697776775791.northamerica-northeast2.run.app/*"],
+    "background": {
+      "service_worker": "background.js"
+      
+    },
+    "action": {
+      "default_popup": "popup/popup.html"
+    },
+    "content_security_policy": {
+      "extension_pages": "default-src 'self'; connect-src 'self' https://supplier-description-api-697776775791.northamerica-northeast2.run.app;"
+    },
+    "web_accessible_resources": [
+  {
+    "resources": ["webSitesProfiles.js"],
+    "matches": ["<all_urls>"]
+  }
+]
+  }
