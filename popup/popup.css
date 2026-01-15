@@ -12,7 +12,11 @@ body {
     padding: 20px;
     overflow: hidden;
 }
-
+.dashboard{
+    position: fixed; bottom: 20px; left: 20px; width: 300px; max-height: 400px;
+    background: white; border: 2px solid #333; z-index: 1000001;
+    overflow-y: auto; padding: 10px; font-family: sans-serif; box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
 .container {
     background: white;
     border-radius: 16px;

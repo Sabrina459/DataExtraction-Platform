@@ -4,6 +4,11 @@
     "version": "1.0",
     "description": "Extract product lists from homepharma.shop into CSV files.",
     "permissions": ["scripting", "activeTab", "downloads"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }],
     "host_permissions": ["https://homepharma.shop/*", "https://supplier-description-api-697776775791.northamerica-northeast2.run.app/*"],
     "background": {
       "service_worker": "background.js"
